@@ -1,0 +1,9 @@
+{
+  "name": "com.ms.litcsv",
+  "displayName": "Lit CSV",
+  "version": "0.0.1",
+  "description": "Lit CSV Reader for Dotnet",
+  "keywords": [
+    "csv"
+  ]
+}

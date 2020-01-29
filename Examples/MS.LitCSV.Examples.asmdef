@@ -1,0 +1,14 @@
+{
+    "name": "MS.LitCSV.Examples",
+    "references": [
+        "MS.LitCSV"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
