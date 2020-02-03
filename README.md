@@ -7,7 +7,7 @@ for Unity 2018.3+:
 
 copy below into Packages/manifest.json
 
-    "com.ms.litcsv:https://github.com/wlgys8/LitCSV.git" 
+    "com.ms.litcsv":"https://github.com/wlgys8/LitCSV.git" 
 
 for other untiy version:
 
