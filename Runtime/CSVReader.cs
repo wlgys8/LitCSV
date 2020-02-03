@@ -116,6 +116,7 @@ namespace MS.LitCSV{
         }
 
         private void EndLine(){
+            EndCell();
             _lines.Add(_currentLine);
             _currentLine = null;
         }
@@ -161,7 +162,8 @@ namespace MS.LitCSV{
                             _inQuote = false;
                         }
                     }else{
-                        throw new System.Exception("Missing \" at line :" + _lines.Count);
+                        _inQuote = false;
+                        // throw new System.Exception("Missing \" at line :" + _lines.Count + "," + _cellStrBuilder.ToString());
                     }
                 }
                 break;
