@@ -7,31 +7,39 @@ namespace MS.LitCSV{
     public class CSVReader
     {
        
-       private List<Line> _lines;
-       private CSVReader(List<Line> lines){
-           _lines = lines;
-       }
+        private List<Line> _lines;
+        private CSVReader(List<Line> lines){
+            _lines = lines;
+        }
 
-       public int lineCount{
-           get{
-               return _lines.Count;
-           }
-       }
+        public int lineCount{
+            get{
+                return _lines.Count;
+            }
+        }
 
-       public Line GetLine(int index){
-           return _lines[index];
-       }
+        public Line GetLine(int index){
+            return _lines[index];
+        }
 
+        public string[][] ToArray(){
+            string[][] array = new string[lineCount][];
+            for(var i = 0; i < array.Length; i ++){
+                array[i] = _lines[i].ToArray();
+            }
+            return array;
+        }
 
-       public static CSVReader ReadText(string text){
-           var lines = new CSVDecoder(text).Parse();
-           return new CSVReader(lines);
-       }
+        public static CSVReader ReadText(string text){
+            var lines = new CSVDecoder(text).Parse();
+            return new CSVReader(lines);
+        }
 
-       public static CSVReader ReadFile(string filePath){
-           var text = File.ReadAllText(filePath);
-           return ReadText(text);
-       }
+        public static CSVReader ReadFile(string filePath){
+            var text = File.ReadAllText(filePath);
+            return ReadText(text);
+        }
+
     }
 
 
@@ -52,6 +60,10 @@ namespace MS.LitCSV{
             get{
                 return _cells.Count;
             }
+        }
+
+        public string[] ToArray(){
+            return _cells.ToArray();
         }
 
     }
